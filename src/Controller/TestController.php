@@ -47,7 +47,7 @@ class TestController extends AbstractController
      * @Route("/single/{id}", name="single")
      */
     public function show(Movie $movie)
-    {      
+    {
         return $this->render('test/single.html.twig', [
           "movie" => $movie,
         ]);
