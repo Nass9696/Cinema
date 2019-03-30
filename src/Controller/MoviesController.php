@@ -11,25 +11,9 @@ use App\Entity\Evaluation;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class TestController extends AbstractController
+class MoviesController extends AbstractController
 {
 
-
-    /**
-     * fonction fète pr tester ds trucs
-     * @Route("/test", name="test")
-     */
-    public function test()
-    {
-        $ms = $this->getDoctrine()->getRepository(Movie::class)->findAll();
-        //fonction qui essé de calc moyen note flm mais prblm
-        for ($i=0; $i < count($ms) ; $i) {
-          $notes = $ms[$i]->getEvaluations()->getGrade();
-        }
-        return $this->render('test/index.html.twig', [
-          "ms" => $ms
-        ]);
-    }
 
     /**
      * @Route("/", name="index")
