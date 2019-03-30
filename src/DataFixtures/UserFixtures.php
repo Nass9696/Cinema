@@ -27,7 +27,6 @@ class UserFixtures extends Fixture
              $user,
              "password$i"
          ));
-
         $manager->persist($user);
       }
         $manager->flush();
